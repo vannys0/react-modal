@@ -13,11 +13,18 @@
 }
 .container {
   width: 400px;
+  height: ;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
 }
 
 @import '~bootstrap/scss/bootstrap';

@@ -2,10 +2,10 @@ import React from 'react'
 
 function Modal({onClose}) {
   return (
-    <div>
+    <div className='w-100 d-flex'>
         <div className='container p-3 d-flex justify-content-center align-items-center flex-column'>
             <div className='d-flex flex-column align-items-center justify-content-center'>
-                <h1><i class="bi bi-trash"></i></h1>
+                <h1><i className="bi bi-trash text-danger"></i></h1>
                 <h1>Delete</h1>
             </div>
             <div>
