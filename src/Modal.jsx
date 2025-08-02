@@ -1,6 +1,11 @@
 import React from 'react'
 
 function Modal({onClose}) {
+    const handleDelete = (e) => {
+        alert("No function to be performed, it's just a template!")
+        onClose(false)
+    }
+
   return (
     <div className='w-100 h-100 d-flex align-items-center justify-content-center' onClick={() => onClose(true)}>
         <div className='container p-3 d-flex justify-content-center align-items-center flex-column' onClick={(e) => e.stopPropagation()}>
@@ -13,7 +18,7 @@ function Modal({onClose}) {
             </div>
             <div className='w-100 gap-2 d-flex align-items-end justify-content-end'>
                 <button onClick={() => onClose(false)} className='btn btn-secondary'>Cancel</button>
-                <button className='btn btn-danger'>Delete</button>
+                <button onClick={handleDelete} className='btn btn-danger'>Delete</button>
             </div>
         </div>
     </div>
