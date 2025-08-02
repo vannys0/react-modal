@@ -1,13 +1,14 @@
 import React from 'react'
 
-function Modal({onClose}) {
+function Modal({onClose, deleteItem}) {
     const handleDelete = (e) => {
         alert("Item deleted successfully!")
         onClose(false)
+        deleteItem(false)
     }
 
   return (
-    <div className='w-100 h-100 d-flex align-items-center justify-content-center' onClick={() => onClose(true)}>
+    <div className='w-100 h-100 d-flex align-items-center justify-content-center'>
         <div className='container p-3 d-flex justify-content-center align-items-center flex-column' onClick={(e) => e.stopPropagation()}>
             <div className='d-flex flex-column align-items-center justify-content-center'>
                 <h1><i className="bi bi-trash text-danger"></i></h1>
