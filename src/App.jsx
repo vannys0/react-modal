@@ -5,13 +5,20 @@ import Modal from "./Modal.jsx"
 
 function App() {
   const [open, setOpen] = useState(false)
+  const [deleteItem, setDeleteItem] = useState(true)
+
+  const onDelete = () => {
+    setOpen(true)
+    setDeleteItem(false)
+  }
+
   return (
     <div className='app'>
       {open ? <Modal onClose={() => setOpen(false)}/> : 
         <div className='d-flex flex-column align-items-center gap-2'>
           <span>This is a custom modal</span>
           <span>Click "Delete" to open Modal</span>
-          <button className='btn btn-danger gap-2 d-flex' onClick={() => setOpen(true)}><i className='bi bi-trash'></i>Delete</button>
+          {deleteItem && <button className='btn btn-danger gap-2 d-flex' onClick={onDelete}><i className='bi bi-trash'></i>Delete</button>}
         </div>}
     </div>
   )

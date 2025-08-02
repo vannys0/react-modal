@@ -2,7 +2,7 @@ import React from 'react'
 
 function Modal({onClose}) {
     const handleDelete = (e) => {
-        alert("No function to be performed, it's just a template!")
+        alert("Item deleted successfully!")
         onClose(false)
     }
 
